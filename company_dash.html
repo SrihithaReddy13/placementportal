@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Recruiter dashboard</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <style>
+
+            h1{
+                text-align: center;
+            }
+            .card {
+                box-shadow: 0 4px 8px 0  rgba(255,255,255,0.4);
+                transition: 0.3s;
+                padding: 15px 16px;
+                background-color: #FFFFFF;
+                color: black;
+                border-radius: 5px;
+                text-align: center;
+            }
+
+            .card:hover {
+                box-shadow: 0 8px 16px 0 rgba(255,255,255,0.5);
+            }
+            .card button{
+                color: white;
+                border-radius: 50px;
+                background-color:  rgba(0,0,0,0.8);
+            }
+
+            * {
+            box-sizing: border-box;
+            }
+
+            .column {
+                float: left;
+                width: 30%;
+                padding: 0 10px;
+            }
+
+            
+            .row {
+                margin: 0 -5px;
+                display: flex;
+                justify-content: center;
+            }
+
+            
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            .post_job{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="body_container">
+            <div class="header">
+                <div class="amrita_logo">
+                    <img src="css/AmritaLogo.png" alt="Amrita Logo" onclick="location.href='homepage.html';">
+                </div>
+                <div>
+                    <h1>RECRUITER DASHBOARD</h1>
+                </div>
+                <div>
+                    <button class="button" onclick="location.href='homepage.html';"><span>Logout</span></button> 
+                </div>
+            </div>
+            <hr style="margin: auto; width: 40%;">
+            <div class="post_job">  
+                <h1>Recruit for a job position!</h1> 
+                <button class="button" onclick="location.href='jd_form.html';"><span>Click here!</span></button> 
+            </div>
+            <h1>Active Jobs</h1>
+            <div class="row">
+                <div class="column">
+                    <div class="card">
+                        <h4><b>Associate Analyst</b></h4> 
+                        <p><b>Type: </b>FTE</p> 
+                        <p><b>Interested Students: </b><button class="button" onclick="location.href='appl_stud_list.html';"><span>Click here!</span></button> </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <h4><b>Intern Analyst</b></h4> 
+                        <p><b>Type: </b>Internship</p> 
+                        <p><b>Interested Students: </b><button class="button" onclick="location.href='appl_stud_list.html';"><span>Click here!</span></button> </p>
+                    </div>
+                </div>
+            </div> 
+        </div>    
+    </body>
+</html>

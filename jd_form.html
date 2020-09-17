@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Post a job</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="css/base.css">
+        <style>
+            #locs{
+                resize: none;
+                width: 70%;
+                height: 45px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="body_container">
+            <div class="header">
+                <div class="amrita_logo">
+                    <img src="css/AmritaLogo.png" alt="Amrita Logo" onclick="location.href='homepage.html';">
+                </div>
+                <div>
+                    <h1>POST A JOB !</h1>
+                </div>
+                <div>
+                    <button class="button" onclick="location.href='homepage.html';"><span>Logout</span></button> 
+                </div>
+            </div>  
+            <hr style="margin: auto; width: 40%;">
+            <h1>Fill the following form -</h1>
+            <form>
+                <fieldset>
+                    <legend><h3><span class="number"></span>Job basic info</h3></legend>
+                    <label for="jname"><b>Job Title :</b></label>
+                    <input type="text" id="jname" name="jname"><br><br>
+                    <label for="eligibility"><b>Eligibility ( x cgpa and above ) :</b></label>
+                    <input type="number" step="0.5" id="eligibility" name="eligibility"><br><br>
+                    <label for="locs"><b>Location(s) :</b></label>
+                    <textarea id="locs" name="locs" required></textarea><br><br>
+                    <label for="ctc"><b>CTC ( in lacs ) :</b></label>
+                    <input type="number" step="0.01" id="ctc" name="ctc"><br><br>
+                    <label for="jtype"><b>Job Type :</b></label>
+                    <select name="jtype" id="jtype">
+                      <option value="FTE">FTE</option>
+                      <option value="internship_6">Internship (6 months)</option>
+                      <option value="internship_3">Internship (3 months)</option>
+                    </select> 
+                </fieldset>
+                <fieldset>
+                    <legend ><h3><span class="number"></span>Upload</h3></legend>
+                    <label for="jd_file">JD File ( Please upload the pdf in drive and provide the editable link ) :</label>
+                    <input type="url" id="jd_file" name="jd_file" accept=".pdf,.docx">
+                </fieldset>
+                <input type="submit" value="Post!">
+            </form>
+        </div>
+    </body>
+</html>

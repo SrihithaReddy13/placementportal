@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html >
+    <head>
+    <meta charset="UTF-8">
+    <title>Recruiter Registration</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    </style>
+    </head>
+
+    <body>
+        <div class="body_container">
+            <div class="header">
+                <div class="amrita_logo">
+                    <img src="css/AmritaLogo.png" alt="Amrita Logo">
+                </div>
+                <div>
+                    <h1>RECRUITER REGISTRATION</h1>
+                </div>
+                <div>
+                    <button class="button" onclick="location.href='homepage.html';"><span>Logout</span></button> 
+                </div>
+            </div>  
+            <hr style="margin: auto; width: 40%;">
+            <form action="process1.php" method="post">
+                <fieldset>
+                    <legend><h3><span class="number"></span>Company basic info</h3></legend>
+                    <label for="name"><b>Name :</b></label>
+                    <input type="text" id="comp_name" name="comp_name" required><br><br>
+                    <label for="place"><b>Head Quarters :</b></label>
+                    <input type="text" id="place" name="place" required><br><br>
+                    <label for="website"><b>Company Website :</b></label>
+                    <input type="url" id="website" name="website" required><br><br>
+                    <label for="mail"><b>University Relations Email :</b></label>
+                    <input type="email" id="mail" name="comp_email" required><br><br>
+                    <label for="pwd"><b>Password :</b></label>
+                    <input type="password" id="pwd" name="pwd" required><br><br>
+                    <label for="pwd"><b>Confirm Password :</b></label>
+                    <input type="password" id="pwd" name="pwd" required><br><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend ><h3><span class="number"></span>About the organisation</h3></legend>
+                    <label for="comp_bio"><b>Biography :</b></label>
+                    <textarea id="comp_bio" name="comp_bio" required></textarea>
+                </fieldset>
+                <input type="submit" value="Register">
+            </form>
+        </div>
+    </body>
+</html>
+
+  
+

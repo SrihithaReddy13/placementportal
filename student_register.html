@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html >
+    <head>
+    <meta charset="UTF-8">
+    <title>Student Registration</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <style>   
+       .bgimg {
+            background-image: url('ca.jpg');
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            color: #FFFFFF;
+        }
+
+        fieldset {
+            border-width: 5px; 
+            padding: 30px;   
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: large;
+        }
+            
+        .button {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: transparent;
+            border:none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 15px;
+            padding: 20px;
+            width: 100%;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        input[type=text],[type=email],  [type=number], [type=url], [type=password], textarea  {
+            width: 90%;
+            background-color: transparent;
+            padding: 12px 20px;
+            color: #FFFFFF;
+            margin: 8px 0;
+            box-sizing: border-box;
+            position: relative;
+            left: 5%;
+        }
+
+        select{
+            width: 90%;
+            background-color: transparent;
+            padding: 12px 20px;
+            color: #FFFFFF;
+            margin: 8px 0;
+            box-sizing: border-box;
+            position: relative;
+            left: 5%;
+        }
+        .footer {
+            clear: both;
+            position: relative;
+            height: 20px;
+            margin-top: -20px;
+            color: #FFFFFF;
+        }
+        #gender_group{
+            border: solid white;
+            border-width: 2px;
+            width: 80%;
+            height: 50px;
+            text-align: center;
+            margin:auto;
+            padding-top: 10px;
+        }
+    </style>
+    </head>
+
+    <body>
+        <div class="bgimg ">
+            <form action="process1.php" method="post">
+            <header>
+                <h1 class="w3-center w3-animate-zoom">Student Signup</h1>
+            </header>
+                <fieldset>
+                    <legend><h3><span class="number"></span>Institute info</h3></legend>
+                    <label for="rollno">Roll Number:</label></br>
+                    <input type="text" id="rollno" name="rollno" required></br>
+                    <label for="mail">Email ID:</label></br>
+                    <input type="email" id="mail" name="comp_email" required></br>
+                    <label for="program">Program:</label></br>
+                    <select id="program" name="program" style="text-align: center;">
+                        <option value="btech">B.Tech</option>
+                        <option value="mba">MBA</option>
+                        <option value="mtech">M.Tech</option>
+                    </select></br>
+                    <label for="program">Specialisation:</label></br>
+                    <select id="specialisation" name="specialisation" style="text-align: center;">
+                        <option value="cse">CSE</option>
+                        <option value="eee">EEE</option>
+                        <option value="ece">ECE</option>
+                        <option value="mech">MECH</option>
+                        <option value="civil">CIVIL</option>
+                    </select></br>
+                </fieldset>
+
+                <fieldset>
+                    <legend ><h3><span class="number"></span>Personal info</h3></legend>
+                    <label for="name">Name:</label></br>
+                    <input type="text" id="stud_name" name="stud_name" required></br>
+                    <label for="gender">Gender:</label></br>
+                    <div id="gender_group">
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Other</label></br>
+                    </div>
+                    <label for="dob">Date of Birth:</label></br>
+                    <input type="text" id="dob" name="dob" required></br>
+                </fieldset>
+                <fieldset>
+                    <legend><h3><span class="number"></span>Account info</h3></legend>
+                    <label for="pwd">Password:</label></br>
+                    <input type="password" id="pwd" name="pwd" required></br>
+                    <label for="pwd">Confirm Password:</label></br>
+                    <input type="password" id="pwd" name="pwd" required></br>
+                </fieldset>
+            </form>
+            <button class="button" onclick="location.href='regtab.html';">
+                <span>Register</span>
+            </button>
+        </div>
+        <div class="footer">
+            Powered by <a href="https://github.com/rishiwick" target="_blank">Starkyboi</a>
+        </div>
+    </body>
+</html>
+
+  
+
