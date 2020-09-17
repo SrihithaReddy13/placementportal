@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<title>Student Dashboard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+h1{
+                text-align: center;
+            }
+                        
+.button {
+                background-color: transparent;
+                color: #FFFFFF;
+                font-size: 15px;
+                padding: 10px;
+                width: 125px;
+                transition: all 0.5s;
+                cursor: pointer;
+                margin: 5px;
+                border-radius: 5px;
+            }
+
+
+  .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+            .button span:after {
+                content: '\00bb';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+
+            .button:hover span {
+                padding-right: 25px;
+            }
+
+            .button:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+body {
+                background-image: url('ca.jpg');
+                height: 100%;
+                background-position: center;
+                background-size: cover;
+                color: #FFFFFF;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+
+.tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            }
+
+            /* Style the buttons inside the tab */
+            .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+            }
+
+            /* Change background color of buttons on hover */
+            .tab button:hover {
+            background-color: #ddd;
+            }
+
+            /* Create an active/current tablink class */
+            .tab button.active {
+            background-color: #ccc;
+            }
+
+            /* Style the tab content */
+            .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+            }
+
+            table{
+                width: 70%;
+                margin-left: auto;
+                margin-right: auto;
+                border: 1px solid white;
+            }
+            th{
+                background-color: #ccc;
+                height: 50px;
+                color: black;
+                width: auto
+            }
+            table td{
+                text-align: center;
+            }
+            .body_container{
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .header{
+                display: flex;
+                justify-content: right;
+            }
+            .header img{
+                height:100px;
+                width:100px;
+            }
+
+            .header h1{
+                font-size: 50px;
+                font-weight: 100;
+                text-align: center;
+            }    
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+
+            function openEvents(evt, which) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(which).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+                
+            $(document).ready(function(){
+                document.getElementsByClassName('tablinks')[0].click()
+            });
+        </script>
+<body class="w3-black">
+    <div class="body_container">
+        <div class="header">
+            <div class="amrita_logo">
+                <img src="AmritaLogo.png" alt="Amrita Logo">
+            </div>
+            <div class="container1" style="text-align: right;">
+                <h1>WELCOME,STUDENT</h1>
+            </div>
+            <div class="container" style="text-align: justify;">
+                <button class="button" onclick="location.href='homepage.html';"><span>Logout</span></button> 
+            </div>
+        </div>
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-black w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="C:\Users\DELL\Desktop\SE project\photo_2020-07-20_10-45-05.jpg" style="width:100%" alt="Avatar">
+          <div class="w3-display-bottomleft w3-container w3-text-black">
+            <h2>Ch Sai Phani Jaswanth</h2>
+          </div>
+        </div>
+        <div class="w3-container">
+          <p><i class="fa fa-asterisk fa-fw w3-margin-right w3-large w3-text-teal">CB.EN.U4CSE17014</i></p>
+          <p><i class="fa fa-asterisk fa-fw w3-margin-right w3-large w3-text-teal"></i>Bachelor Of Technology</p>
+          <p><i class="fa fa-asterisk fa-fw w3-margin-right w3-large w3-text-teal"></i>Computer Science</p>
+          <p><i class="fa fa-asterisk fa-fw w3-margin-right w3-large w3-text-teal"></i>Amrita Vishwa Vidyapeetham</p>
+          <hr>
+
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Grades</b></p>
+          <p>Tenth percentage</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:95%">95%</div>
+          </div>
+          <p>Twelth Percentage</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:97%">
+              <div class="w3-center w3-text-white">97%</div>
+            </div>
+          </div>
+          <p>CGPA</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:87%">87%</div>
+          </div>
+          
+          <br>
+
+          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Reach Me At:</b></p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>jaswanth9699@gmail.com</p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>7397075953</p>
+          <br>
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+    
+      <div class="w3-container w3-card w3-black w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>My Job Applications</h2>
+        <div class="tab">
+          <button class="tablinks" onclick="openEvents(event, 'Saved')">Saved</button>
+          <button class="tablinks" onclick="openEvents(event, 'Active')">Active</button>
+          <button class="tablinks" onclick="openEvents(event, 'Closed')">Closed</button>
+    
+  
+          <hr>
+        </div>
+        <div id="Saved" class="tabcontent">
+          <h3>Saved Applications</h3>
+          <table>
+              <tr>
+                  <th>Job Id</th>
+                  <th>Company</th>
+                  <th>Job Title</th>
+                  <th>FTE/Internship</th>
+                  <th>Eligibility</th>
+                  <th>Location</th>
+                  <th>Job status</th>
+              </tr>
+              <tr>
+                  <td>1789675</td>
+                  <td>Melwin Softwares</td>
+                  <td>Associate Software Developer</td>
+                  <td>FTE</td>
+                  <td>7 CGPA AND ABOVE</td>
+                  <td>Banglore</td>
+                  <td>Not considered at this time</td>
+              </tr>
+          </table>
+      </div>
+      
+      
+      <div id="Active" class="tabcontent">
+          <h3>Active Applications</h3>
+          <table>
+              <tr>
+                  <th>Job Id</th>
+                  <th>Applied Company</th>
+                  <th>Job Title</th>
+                  <th>FTE/Internship</th>
+                  <th>Eligibility</th>
+                  <th>Location</th>
+                  <th>Job status</th>
+              </tr>
+              <tr>
+                  <td>1789675</td>
+                  <td>Melwin Softwares</td>
+                  <td>Associate Software Developer</td>
+                  <td>FTE</td>
+                  <td>7 CGPA AND ABOVE</td>
+                  <td>Banglore</td>
+                  <td>In process</td>
+              </tr>
+          </table>
+      </div>
+      
+      
+     <div id="Closed" class="tabcontent">
+          <h3>Closed Job Applications</h3>
+          <table>
+              <tr>
+                  <th>Job Id</th>
+                  <th>Applied Company</th>
+                  <th>Job Title</th>
+                  <th>FTE/Internship</th>
+                  <th>Eligibility</th>
+                  <th>Location</th>
+                  <th>Job status</th>
+              </tr>
+              <tr>
+                  <td>1789675</td>
+                  <td>Melwin Softwares</td>
+                  <td>Associate Software Developer</td>
+                  <td>FTE</td>
+                  <td>7 CGPA AND ABOVE</td>
+                  <td>Banglore</td>
+                  <td>Rejected</td>
+              </tr>
+          </table>
+      </div>
+        
+
+      <div class="w3-container w3-card w3-black">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Apply For Jobs</h2>
+        <button class="button" onclick="location.href='';"><span>Click here!</span></button>
+          
+      </div>
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
