@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<title>Student Dashboard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/student_dash.css">
+<script type="text/javascript" src="js/student_dash.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<body class="w3-transparent">
+    <div class="body_container">
+        <div class="header">
+            <div class="amrita_logo">
+                <img src="images/AmritaLogo.png" alt="Amrita Logo">
+            </div>
+            <div class="container1" style="text-align: right;">
+                <h1>STUDENT DASHBOARD</h1>
+            </div>
+            <div class="container" style="text-align: justify;">
+                <button class="button" onclick="location.href='homepage.html';"><span>Logout</span></button> 
+            </div>
+        </div>
+        <hr style="margin: auto; width: 40%;">
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-transparent w3-text-white w3-card-4">
+        <div class="w3-display-container">
+          <img src="images/photo_2020-07-20_10-45-05.jpg" style="width:100%" alt="Avatar">
+          <p><i class="fa-fw w3-margin-right w3-large w3-text-white style=text-align:center;">Ch Sai Phani Jaswanth</i></p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <p><i class="fa fa-asterisk fa-fw w3-margin-right w3-large w3-text-white">CB.EN.U4CSE17014</i></p>
+          <p><i class="fa fa-asterisk fa-fw w3-margin-right w3-large w3-text-white"></i>Bachelor Of Technology</p>
+          <p><i class="fa fa-asterisk fa-fw w3-margin-right w3-large w3-text-white"></i>Computer Science</p>
+    
+          <hr>
+
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-white"></i>Grades</b></p>
+          <p>Tenth percentage</p>
+          <div class="w3-text-white w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:95%">95%</div>
+          </div>
+          <p>Twelth Percentage</p>
+          <div class="w3-text-white w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:97%">
+              <div class="w3-center w3-text-white">97%</div>
+            </div>
+          </div>
+          <p>CGPA</p>
+          <div class="w3-text-white w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:87%">87%</div>
+          </div>
+          
+          <br>
+
+          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-white"></i>Contact info:</b></p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>jaswanth9699@gmail.com</p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>7397075953</p>
+          <br>
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+    
+      <div class="w3-container w3-card w3-transparent w3-margin-bottom">
+        <h2 class="w3-text-white w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>My Job Applications</h2>
+        <div class="tab">
+          <button class="tablinks" onclick="openEvents(event, 'Saved')">Saved</button>
+          <button class="tablinks" onclick="openEvents(event, 'Active')">Active</button>
+          <button class="tablinks" onclick="openEvents(event, 'Closed')">Closed</button>
+    
+  
+          <hr>
+        </div>
+        <div id="Saved" class="tabcontent">
+          <h3>Saved Applications</h3>
+          <table>
+              <tr>
+                  <th>Job Id</th>
+                  <th>Company</th>
+                  <th>Job Title</th>
+                  <th>FTE/Internship</th>
+                  <th>Eligibility</th>
+                  <th>Location</th>
+                  <th>Job status</th>
+              </tr>
+              <tr>
+                  <td>1789675</td>
+                  <td>Melwin Softwares</td>
+                  <td>Associate Software Developer</td>
+                  <td>FTE</td>
+                  <td>7 CGPA AND ABOVE</td>
+                  <td>Banglore</td>
+                  <td>Not considered at this time</td>
+              </tr>
+          </table>
+      </div>
+      
+      
+      <div id="Active" class="tabcontent">
+          <h3>Active Applications</h3>
+          <table>
+              <tr>
+                  <th>Job Id</th>
+                  <th>Applied Company</th>
+                  <th>Job Title</th>
+                  <th>FTE/Internship</th>
+                  <th>Eligibility</th>
+                  <th>Location</th>
+                  <th>Job status</th>
+              </tr>
+              <tr>
+                  <td>1789675</td>
+                  <td>Melwin Softwares</td>
+                  <td>Associate Software Developer</td>
+                  <td>FTE</td>
+                  <td>7 CGPA AND ABOVE</td>
+                  <td>Banglore</td>
+                  <td>In process</td>
+              </tr>
+          </table>
+      </div>
+      
+      
+     <div id="Closed" class="tabcontent">
+          <h3>Closed Job Applications</h3>
+          <table>
+              <tr>
+                  <th>Job Id</th>
+                  <th>Applied Company</th>
+                  <th>Job Title</th>
+                  <th>FTE/Internship</th>
+                  <th>Eligibility</th>
+                  <th>Location</th>
+                  <th>Job status</th>
+              </tr>
+              <tr>
+                  <td>1789675</td>
+                  <td>Melwin Softwares</td>
+                  <td>Associate Software Developer</td>
+                  <td>FTE</td>
+                  <td>7 CGPA AND ABOVE</td>
+                  <td>Banglore</td>
+                  <td>Rejected</td>
+              </tr>
+          </table>
+      </div>
+        
+
+      <div class="w3-container w3-card w3-transparent">
+        <h2 class="w3-text-white w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Apply For Jobs</h2>
+        <button class="button" onclick="location.href='';"><span>Click here!</span></button>
+        <hr>
+        <div class="w3-container">
+            <h5 class="w3-text-white"><b>Resume</b></h5>
+            <label class="w3-text-white"for="website">Google Drive Link:</label></br>
+            <a href="https://drive.google.com/file/d/1j0vs54Xa8sLYp6RrC25gkcH96ZUJf5Tn/view?usp=drivesdk">Click here</a>
+            <input type="url" id="website" name="website" required></br>
+            <hr>
+          </div>  
+      </div>
+
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
