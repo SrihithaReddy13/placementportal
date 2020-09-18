@@ -1,0 +1,283 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html>
+    <head>
+        <title>Applicants</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/base.css">
+        <script type="text/javascript" src="js/appl_stud_list.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <style>
+            th{
+                background-color: grey;
+                color: #000;
+                height: 45px;
+            }
+            td{
+                border: 1px solid white;
+                height: 45px;
+            }
+            table{
+                width: 90%;
+                margin: auto;   
+                text-align: center;
+
+            }
+            .table{
+                overflow-y: auto;
+                overflow-x: auto;
+                height: 400px;
+            }
+            td form{
+                margin: auto;
+                margin-right: 80%;
+            }
+            td form input[type=submit]{
+                width: auto;
+                position: relative;
+                right: 50px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="body_container">
+            <div class="header">
+                <div class="amrita_logo">
+                    <img src="css/AmritaLogo.png" alt="Amrita Logo" onclick="location.href='homepage.html';">
+                </div>
+                <div>
+                    <h1>List Of Applicants</h1>
+                </div>
+                <!-- LOGOUT ONLY IF NEEDED - PAY ATTENTION HERE-->
+                <div>
+                    <button class="button" onclick="location.href='homepage.html';"><span>Logout</span></button> 
+                </div>
+            </div>
+            <hr style="margin: auto; width: 40%;">
+            <br><br>
+            <div class="table">
+                <table id="tableData">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Student Name</th>
+                            <th>CGPA</th>
+                            <th>Gender</th>
+                            <th>Contact No</th>
+                            <th>Email</th>
+                            <th>Specification</th>
+                            <th>Resume</th>
+                            <th>Status</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>CB.EN.U4CSE17005</td>
+                            <td>9.3</td>
+                            <td>Male</td>
+                            <td>9123456734</td>
+                            <td>johndoe@gmail.com</td>
+                            <td>CSE</td>
+                            <td><a href="https://docs.google.com/document/d/10H__sMhDmWOH6LGCoCgJ_45NX1F4lUs3tFmBZOiW9KE/edit?usp=sharing">Resume</a></td>
+                            <td>Pending</td>
+                            <td>
+                                <form onsubmit="chage_status();">
+                                    <input type="submit" value="Select">
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>CB.EN.U4CSE17005</td>
+                            <td>9.3</td>
+                            <td>Male</td>
+                            <td>9123456734</td>
+                            <td>johndoe@gmail.com</td>
+                            <td>CSE</td>
+                            <td><a href="https://docs.google.com/document/d/10H__sMhDmWOH6LGCoCgJ_45NX1F4lUs3tFmBZOiW9KE/edit?usp=sharing">Resume</a></td>
+                            <td>Pending</td>
+                            <td>
+                                <form>
+                                    <input type="submit" value="Select">
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>CB.EN.U4CSE17263</td>
+                            <td>8.9</td>
+                            <td>Female</td>
+                            <td>9123456734</td>
+                            <td>vanedoe@gmail.com</td>
+                            <td>CSE</td>
+                            <td><a href="https://docs.google.com/document/d/10H__sMhDmWOH6LGCoCgJ_45NX1F4lUs3tFmBZOiW9KE/edit?usp=sharing">Resume</a></td>
+                            <td>Selected</td>
+                            <td>
+                                <form onsubmit="chage_status();">
+                                    <input type="submit" value="Reject">
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>CB.EN.U4CSE17545</td>
+                            <td>7.7</td>
+                            <td>Male</td>
+                            <td>9123456734</td>
+                            <td>jackdoe@gmail.com</td>
+                            <td>ECE</td>
+                            <td><a href="https://docs.google.com/document/d/10H__sMhDmWOH6LGCoCgJ_45NX1F4lUs3tFmBZOiW9KE/edit?usp=sharing">Resume</a></td>
+                            <td>Pending</td>
+                            <td>
+                                <form>
+                                    <input type="submit" value="Select">
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>CB.EN.U4CSE17604</td>
+                            <td>9.1</td>
+                            <td>Female</td>
+                            <td>9123456734</td>
+                            <td>vanilla@gmail.com</td>
+                            <td>ECE</td>
+                            <td><a href="https://docs.google.com/document/d/10H__sMhDmWOH6LGCoCgJ_45NX1F4lUs3tFmBZOiW9KE/edit?usp=sharing">Resume</a></td>
+                            <td>Pending</td>
+                            <td>
+                                <form>
+                                    <input type="submit" value="Select">
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>CB.EN.U4CSE17005</td>
+                            <td>9.3</td>
+                            <td>Male</td>
+                            <td>9123456734</td>
+                            <td>johndoe@gmail.com</td>
+                            <td>CSE</td>
+                            <td><a href="https://docs.google.com/document/d/10H__sMhDmWOH6LGCoCgJ_45NX1F4lUs3tFmBZOiW9KE/edit?usp=sharing">Resume</a></td>
+                            <td>Pending</td>
+                            <td>
+                                <form>
+                                    <input type="submit" value="Select">
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>CB.EN.U4CSE17005</td>
+                            <td>9.3</td>
+                            <td>Male</td>
+                            <td>9123456734</td>
+                            <td>johndoe@gmail.com</td>
+                            <td>CSE</td>
+                            <td><a href="https://docs.google.com/document/d/10H__sMhDmWOH6LGCoCgJ_45NX1F4lUs3tFmBZOiW9KE/edit?usp=sharing">Resume</a></td>
+                            <td>Pending</td>
+                            <td>
+                                <form>
+                                    <input type="submit" value="Select">
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>CB.EN.U4CSE17005</td>
+                            <td>9.3</td>
+                            <td>Male</td>
+                            <td>9123456734</td>
+                            <td>johndoe@gmail.com</td>
+                            <td>CSE</td>
+                            <td><a href="https://docs.google.com/document/d/10H__sMhDmWOH6LGCoCgJ_45NX1F4lUs3tFmBZOiW9KE/edit?usp=sharing">Resume</a></td>
+                            <td>Pending</td>
+                            <td>
+                                <form>
+                                    <input type="submit" value="Select">
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>CB.EN.U4CSE17005</td>
+                            <td>9.3</td>
+                            <td>Male</td>
+                            <td>9123456734</td>
+                            <td>johndoe@gmail.com</td>
+                            <td>CSE</td>
+                            <td><a href="https://docs.google.com/document/d/10H__sMhDmWOH6LGCoCgJ_45NX1F4lUs3tFmBZOiW9KE/edit?usp=sharing">Resume</a></td>
+                            <td>Pending</td>
+                            <td>
+                                <form>
+                                    <input type="submit" value="Select">
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>CB.EN.U4CSE17005</td>
+                            <td>9.3</td>
+                            <td>Male</td>
+                            <td>9123456734</td>
+                            <td>johndoe@gmail.com</td>
+                            <td>CSE</td>
+                            <td><a href="https://docs.google.com/document/d/10H__sMhDmWOH6LGCoCgJ_45NX1F4lUs3tFmBZOiW9KE/edit?usp=sharing">Resume</a></td>
+                            <td>Pending</td>
+                            <td>
+                                <form>
+                                    <input type="submit" value="Select">
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>CB.EN.U4CSE17005</td>
+                            <td>9.3</td>
+                            <td>Male</td>
+                            <td>9123456734</td>
+                            <td>johndoe@gmail.com</td>
+                            <td>CSE</td>
+                            <td><a href="https://docs.google.com/document/d/10H__sMhDmWOH6LGCoCgJ_45NX1F4lUs3tFmBZOiW9KE/edit?usp=sharing">Resume</a></td>
+                            <td>Pending</td>
+                            <td>
+                                <form>
+                                    <input type="submit" value="Select">
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>CB.EN.U4CSE17005</td>
+                            <td>9.3</td>
+                            <td>Male</td>
+                            <td>9123456734</td>
+                            <td>johndoe@gmail.com</td>
+                            <td>CSE</td>
+                            <td><a href="https://docs.google.com/document/d/10H__sMhDmWOH6LGCoCgJ_45NX1F4lUs3tFmBZOiW9KE/edit?usp=sharing">Resume</a></td>
+                            <td>Pending</td>
+                            <td>
+                                <form>
+                                    <input type="submit" value="Select">
+                                </form>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br><br>
+            <div class="finish">
+                <fieldset>
+                    <legend><h3>Close the job position</h3></legend>        
+                    <form>
+                        <input type="submit" value="Close">
+                    </form>
+                </fieldset>
+            </div>
+            <br><br>
+        </div>    
+    </body>
+</html>
