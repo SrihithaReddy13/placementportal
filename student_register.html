@@ -37,8 +37,10 @@
             <form action="homepage.html">
                 <fieldset>
                     <legend><h3><span class="number"></span>Institute info</h3></legend>
-                    <label for="rollno">Roll Number:</label>
-                    <input type="text" id="rollno" name="rollno" required><br><br>
+                    <label for="rollno">Roll Number: 
+                        <span id='roll_val' style="text-align: center;"></span>
+                    </label>
+                    <input type="text" id="rollno" name="rollno" onkeyup="rno_check();" required><br><br>
                     <label for="mail">Email ID:</label>
                     <input type="email" id="mail" name="comp_email" required><br><br>
                     <label for="program">Program:</label>
@@ -58,11 +60,13 @@
 
                 <fieldset>
                     <legend ><h3><span class="number"></span>Personal info</h3></legend>
-                    <label for="name">Name:</label>
-                    <input type="text" id="stud_name" name="stud_name" required><br><br>
+                    <label for="name">Name:
+                        <span id='name_val'></span>
+                    </label>
+                    <input type="text" id="stud_name" name="stud_name" onkeyup='name_check();' required><br><br>
                     <label for="gender">Gender:</label>
                     <div id="gender_group">
-                        <input type="radio" id="male" name="gender" value="male">
+                        <input type="radio" id="male" name="gender" value="male" checked="checked">
                         <label for="male">Male</label><br>
                         <input type="radio" id="female" name="gender" value="female">
                         <label for="female">Female</label><br>
@@ -70,16 +74,16 @@
                         <label for="other">Other</label><br>
                     </div><br><br>
                     <label for="dob">Date of Birth:</label>
-                    <input type="text" id="dob" name="dob" required><br><br>
+                    <input type="date" id="dob" name="dob" required><br><br>
                 </fieldset>
                 <fieldset>
                     <legend><h3><span class="number"></span>Resume Info</h3></legend>
                     <label for="10th">Tenth Percentage:</label>
-                    <input type="number" step="0.01" id="10th" name="10th" required><br><br>
+                    <input type="number" step="0.01" id="10th" name="10th" min="0.00" max="100.00" required><br><br>
                     <label for="12th">Twelfth Percentage:</label>
-                    <input type="number" step="0.01" id="12th" name="12th" required><br><br>
+                    <input type="number" step="0.01" id="12th" name="12th" min="0.00" max="100.00" required><br><br>
                     <label for="cgpa">UG CGPA:</label>
-                    <input type="number" step="0.01" id="cgpa" name="cgpa" required><br><br>
+                    <input type="number" step="0.01" id="cgpa" name="cgpa" min="0.00" max="10.00" required><br><br>
                     <label for="resume">Resume ( Please upload the resume in Gdrive and provide the editable link ) :</label>
                     <input type="url" id="resume" name="resume" required><br><br>
                 </fieldset>
@@ -88,7 +92,7 @@
                     <label for="pwd">Password:</label>
                     <input type="password" id="pwd" name="pwd" onkeyup='check();' required><br><br>
                     <label for="cpwd">Confirm Password:
-                        <span id='message'></span>
+                        <span id='match_pwd'></span>
                     </label>
                     <input type="password" id="cpwd" name="cpwd" onkeyup='check();' required><br><br>
                 </fieldset>
